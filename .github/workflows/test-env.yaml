@@ -1,4 +1,4 @@
-name: "deployment"
+name: Deployment
 
 on:
   push:
@@ -7,12 +7,15 @@ on:
       
 jobs:
   dev:
+    runs-on: ubuntu-latest
     environment: dev
     steps:
       - name: run
         run: echo dev
         
-   prod:
+  prod:
+    needs: dev
+    runs-on: ubuntu-latest
     environment: prod
     steps:
       - name: run
