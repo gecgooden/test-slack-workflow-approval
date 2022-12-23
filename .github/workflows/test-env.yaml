@@ -11,7 +11,7 @@ jobs:
     environment: dev
     steps:
       - name: run
-        run: echo dev
+        run: echo dev 1
         
   prod:
     needs: dev
@@ -19,6 +19,6 @@ jobs:
     environment: prod
     steps:
       - name: run
-        run: echo prod
+        run: echo prod 1
         
      
