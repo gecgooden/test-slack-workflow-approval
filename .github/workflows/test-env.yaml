@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  dev:
+    environment: dev
+    steps:
+      - name: run
+        run: echo dev
+        
+   prod:
+    environment: prod
+    steps:
+      - name: run
+        run: echo prod
+        
+     
